@@ -1,0 +1,10 @@
+//mixins
+@mixin font-setting ($w, $s, $l) {
+    font-weight: $w;
+    font-size: $s;
+    line-height: $l;
+}
+
+//container
+//colors
+$white: rgba(241, 241, 241, 1);

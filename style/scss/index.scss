@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'theLastOfUsFont';
+    src: url('../font/HeadlinerNo45.woff') format('woff'),
+         url('../font/HeadlinerNo45.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+@import "./reset";
+@import "./tools";
+
+*, a {
+    color: $white;
+    text-decoration: none;
+}
+
+body {
+    font-family: "theLastOfUsFont", "Arial", sans-serif;
+    background: url("../assets/main_bcg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // filter: drop-shadow(10px 16px 20px rgb(80, 80, 92));
+    min-height: 100vh;
+    @media screen and (max-width: 840px) {
+        background-position: center;
+    }
+}
+
+.container {
+    max-width: 1580px - 40px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.normal-text {
+    @include font-setting (400, 60px, 68px);
+    letter-spacing: 5%;
+    @media screen and (max-width: 1200px) {
+        @include font-setting (400, 40px, 48px);
+        max-width: 400px;
+    }
+}
+
+.header {
+    text-align: center;
+    @media screen and (max-width: 840px) {
+        display: flex;
+        justify-content: end;
+        padding-top: 20px;
+    }
+    &__navigation {
+        @media screen and (max-width: 840px) {
+            display: none;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 0 55px;
+        padding: 38px 0 43px;
+        @media screen and (max-width: 840px) {
+            padding: 20px 20px;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+    &__link {
+        transition: 0.2s ease;
+        &:hover {
+            filter: drop-shadow(10px 16px 20px rgb(92, 92, 97));
+        }
+    }
+}
+
+.offcanvas {
+    background: rgb(15,15,15);
+    background: linear-gradient(333deg, rgba(15,15,15,1) 0%, rgba(50,50,50,1) 45%, rgba(167,167,167,1) 100%);
+    min-height: 50%;
+}
+
+.btn-close {
+    color: $white;
+}
+
+.btn {
+    display: none;
+    @media screen and (max-width: 840px) {
+        display: block;
+    }
+}
+
+.main {
+    width: inherit;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    @media screen and (max-width: 840px) {
+        flex-direction: column;
+        align-items: baseline;
+    }
+    &__logo {
+        @media screen and (max-width: 1200px) {
+            max-width: 350px;
+        }
+        @media screen and (max-width: 400px) {
+            max-width: 200px;
+        }
+    }
+    &__h1 {
+        max-width: 600px;
+        @media screen and (max-width: 1200px) {
+            max-width: 400px;
+        }
+        @media screen and (max-width: 840px) {
+            margin-top: 20px;
+            align-self: flex-end;
+        }
+    }
+}
+
