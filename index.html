@@ -15,45 +15,83 @@
 </head>
 
 <body>
-    <div class="container">
+    <audio controls autoplay class="audio">
+        <source src="./assets/the_last_of_us_part_2_02. Unbound.mp3">
+    </audio>
 
-        <header class="header">
-            <nav class="header__navigation">
-                <ul class="header__list">
-                    <li><a href="#" class="header__link normal-text">Home</a></li>
-                    <li><a href="#" class="header__link normal-text">Gameplay</a></li>
-                    <li><a href="#" class="header__link normal-text">Charachters</a></li>
-                    <li><a href="#" class="header__link normal-text">News</a></li>
-                </ul>
-            </nav>
+    <div class="main-wrap">
+        <div class="container">
 
-            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
-                aria-controls="offcanvasTop"><svg width="30" height="20" viewBox="0 0 30 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect width="30" height="4" fill="#FCFCFC" />
-                    <rect y="8" width="30" height="4" fill="#FCFCFC" />
-                    <rect y="16" width="30" height="4" fill="#FCFCFC" />
-                </svg>
-            </button>
-
-            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-                <div class="offcanvas-body">
+            <header class="header">
+                <nav class="header__navigation">
                     <ul class="header__list">
                         <li><a href="#" class="header__link normal-text">Home</a></li>
-                        <li><a href="#" class="header__link normal-text">Gameplay</a></li>
+                        <li><a href="#story" class="header__link normal-text">Story</a></li>
                         <li><a href="#" class="header__link normal-text">Charachters</a></li>
-                        <li><a href="#" class="header__link normal-text">News</a></li>
+                        <li><a href="#" class="header__link normal-text">Infected</a></li>
+                        <li><a href="#" class="header__link normal-text">Gallery</a></li>
+
                     </ul>
+                </nav>
+
+                <!-- <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+                    aria-controls="offcanvasTop"><svg width="30" height="20" viewBox="0 0 30 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="30" height="4" fill="#FCFCFC" />
+                        <rect y="8" width="30" height="4" fill="#FCFCFC" />
+                        <rect y="16" width="30" height="4" fill="#FCFCFC" />
+                    </svg>
+                </button>
+    
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                    <div class="offcanvas-body">
+                        <ul class="header__list">
+                            <li><a href="#" class="header__link normal-text">Home</a></li>
+                            <li><a href="#" class="header__link normal-text">Gameplay</a></li>
+                            <li><a href="#" class="header__link normal-text">Charachters</a></li>
+                            <li><a href="#" class="header__link normal-text">News</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </header>
+
+            <main class="main">
+                <img src="./assets/Vector.svg" alt="The Last Of Us" class="main__logo">
+
+
+                <div class="main__content">
+                    <h1 class="main__h1 normal-text">I'm gonna find... and I'm gonna kill... every last one of them
+                    </h1>
+                    <a href="#" class="md-btn">Play now</a>
+                    <img src="./assets/Naughty_Dog-Logo.wine 1.svg" alt="Naughty Dog" class="naughty_logo">
                 </div>
-            </div>
-        </header>
 
-        <main class="main">
-            <img src="./assets/Vector.svg" alt="The Last Of Us" class="main__logo">
+            </main>
+        </div>
+    </div>
 
-            <h1 class="main__h1 normal-text">I'm gonna find... and I'm gonna kill... every last one of them
-            </h1>
-        </main>
+    <div class="section-wrap" id="story">
+        <div class="container">
+            <section class="story">
+                <div class="story__content">
+                    <h2 class="story__h2">The story</h2>
+                    <p class="story__text">The Last of Us Part II is an actionadventure survival horror and thirdperson
+                        stealth action. the player can use firearms, makeshift weapons, and bows against hostile members
+                        of other factions and those infected with the Cordyceps fungus... </p>
+                    <a href="#" class="md-btn">learn More</a>
+                </div>
+
+                <div class="story__video">
+                    <iframe class="story__trailer" width="1182" height="665"
+                        src="https://www.youtube.com/embed/btmN-bWwv0A"
+                        title="The Last of Us Part II – E3 2018 Gameplay Reveal Trailer | PS4" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <a href="#" class="md-btn">Watch more</a>
+                </div>
+
+            </section>
+        </div>
     </div>
 </body>
 

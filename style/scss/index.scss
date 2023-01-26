@@ -13,20 +13,31 @@
     text-decoration: none;
 }
 
-body {
+.audio {
+    display: none;
+}
+
+
+//first stage
+.main-wrap, .section-wrap {
     font-family: "theLastOfUsFont", "Arial", sans-serif;
-    background: url("../assets/main_bcg.png");
+    background: url("../assets/MAIN_BCG.png");
     background-repeat: no-repeat;
     background-size: cover;
-    // filter: drop-shadow(10px 16px 20px rgb(80, 80, 92));
     min-height: 100vh;
+    box-shadow: inset 0px -20px 150px 55px rgb(5 0 0);
+
     @media screen and (max-width: 840px) {
         background-position: center;
     }
 }
 
+.section-wrap {
+    background-image: url('../assets/section_bcg.png');
+}
+
 .container {
-    max-width: 1580px - 40px;
+    max-width: 1760px - 40px;
     padding: 0 20px;
     margin: 0 auto;
     display: flex;
@@ -35,7 +46,7 @@ body {
 
 .normal-text {
     @include font-setting (400, 60px, 68px);
-    letter-spacing: 5%;
+    letter-spacing: 2px;
     @media screen and (max-width: 1200px) {
         @include font-setting (400, 40px, 48px);
         max-width: 400px;
@@ -68,7 +79,8 @@ body {
     &__link {
         transition: 0.2s ease;
         &:hover {
-            filter: drop-shadow(10px 16px 20px rgb(92, 92, 97));
+            color: rgb(124, 123, 123);
+            border-bottom: 5px solid rgb(124, 123, 123);
         }
     }
 }
@@ -78,11 +90,9 @@ body {
     background: linear-gradient(333deg, rgba(15,15,15,1) 0%, rgba(50,50,50,1) 45%, rgba(167,167,167,1) 100%);
     min-height: 50%;
 }
-
 .btn-close {
     color: $white;
 }
-
 .btn {
     display: none;
     @media screen and (max-width: 840px) {
@@ -93,7 +103,7 @@ body {
 .main {
     width: inherit;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     @media screen and (max-width: 840px) {
         flex-direction: column;
@@ -107,8 +117,15 @@ body {
             max-width: 200px;
         }
     }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 44px 0;
+    }
     &__h1 {
         max-width: 600px;
+        
         @media screen and (max-width: 1200px) {
             max-width: 400px;
         }
@@ -117,5 +134,74 @@ body {
             align-self: flex-end;
         }
     }
+    &__h1::before {
+        content: '';
+        display: block;
+        height: 200px;
+        width: 4px;
+        background: linear-gradient(0deg, #FFFEFE -9.17%, rgba(191, 191, 191, 0.25) 71.66%);
+        border-radius: 2px;
+        margin: 0 auto;
+        margin-bottom: 14px;
+    }
 }
+
+.md-btn {
+    border: 4px solid $white;
+    background: rgba(0, 0, 0, 0.4);
+    @include font-setting (400, 40px, 68px);
+    letter-spacing: 2px;
+    padding: 16px 95px 20px;
+    width: fit-content;
+    transition: 0.5s ease;
+}
+.md-btn:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.naughty_logo {
+    align-self: flex-end;
+    margin-top: 150px;
+}
+
+
+// second stage
+
+.story {
+    display: flex;
+    padding: 70px 0;
+    gap: 0 228px;
+    min-height: 100vh;
+    justify-content: space-between;
+
+    &__content {
+        max-width: 680px;
+    }
+
+    &__h2 {
+        @include font-setting (400, 100px, 68px);
+        letter-spacing: 2px;
+    }
+
+    &__text {
+        @include font-setting (400, 46px, 52px);
+        letter-spacing: 2px;
+        margin: 80px 0 66px;
+    }
+
+    &__video {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        align-self: end;
+        gap: 30px 0;
+    }
+
+    &__trailer {
+        border-radius: 10px;
+        width: 588px;
+        height: 331px;
+    }
+}
+
 
